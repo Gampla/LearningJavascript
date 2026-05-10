@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booleans</title>
+</head>
+<body>
+    <script>
+        let hour = 10;
+        let name = 'afrisa';
+        if (hour >=6 && hour <=12) {
+            console.log(`Good morning, ${name}!`);
+        }else if (hour > 12 && hour <= 17) {
+            console.log(`Good afternoon, ${name}!`);
+        } else {
+            console.log(`Good evening, ${name}!`);
+        }
+
+        let age ='4';
+        const holiday = false;
+        if (holiday && (age <= 6 || age >= 65 )) {
+            console.log('discount');
+        }else{
+            console.log('no discount');
+        }
+
+        randomNumber = Math.random();
+        let computerTake = randomNumber <= 0.5 ? 'heads' : 'tails';
+        let userTake = 'heads';
+        let result = userTake === computerTake ? 'Win the game' : 'Lose the game';
+        console.log(`User take : ${userTake} Computer take: ${computerTake} , Result: ${result}`);
+    </script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chart Quantity</title>
+</head>
+<body>
+    <button onclick="
+        console.log(quantity)">Show Quantity</button>
+    <button onclick="
+    quantity++;
+    if (quantity + 1 > 10) {
+        alert('Your cart is full, don\'t add more products');
+        quantity = 10;
+    }
+    console.log(`Total: ${quantity}`)">Add to Cart</button>
+    <button onclick="
+    quantity += 2;
+    if (quantity + 2 > 10) {
+        alert('Your cart is full, don\'t add more products');
+        quantity = 10;
+    }
+    console.log(`Total: ${quantity}`)">+2</button>
+    <button onclick="
+    quantity += 3;
+    if (quantity + 3 > 10) {
+        alert('Your cart is full, don\'t add more products');
+        quantity = 10;
+    }
+    console.log(`Total: ${quantity}`)">+3</button>
+    <button onclick="
+    quantity += 4;
+    if (quantity + 4 > 10) {
+        alert('Your cart is full, don\'t add more products');
+    }
+    console.log(`Total: ${quantity}`)">+4</button>
+    <button onclick="
+    quantity += 5;
+    if (quantity + 5 > 10) {
+        alert('Your cart is full, don\'t add more products');
+    }
+    console.log(`Total: ${quantity}`)">+5</button>
+    <button onclick="
+    quantity = 0;
+    console.log(`Total: ${quantity}`)">Reset Cart</button>
+    <button onclick="
+    if (quantity - 1 < 0) {
+        alert('Your cart is empty, can\'t remove more products');
+        quantity = 0;
+    } else {
+        quantity--;
+        
+    };
+    console.log(`Total: ${quantity}`)">Remove From Chart</button>
+    <button onclick="
+    if (quantity - 2 < 0) {
+        alert('Your cart is empty, can\'t remove more products');
+        quantity = 0;
+    } else {
+        quantity -= 2;
+    }
+    console.log(`Total: ${quantity}`)">-2</button>
+    <button onclick="
+    if (quantity - 3 < 0) {
+        alert('Your cart is empty, can\'t remove more products');
+        quantity = 0;
+    } else {
+        quantity -= 3;
+    }
+    console.log(`Total: ${quantity}`)">-3</button>
+</body>
+<script>
+   let quantity = 0;
+
+</script>
+</html>
