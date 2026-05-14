@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+    <script>
+        const person= {
+            name: 'afrisa',
+            age: 21
+        }
+        console.log(person.name);
+        console.log(person.age);
+        person.live = 'jakarta';
+        console.log(person);
+        delete person.live;
+        console.log(person);
+        
+        const product2 = {
+            name: 't-shirt',
+            rating:{
+                rate: 4.5,
+                count: 100 // this is a object in a object or nested object
+            },
+            fun: function(){
+                console.log('this is a function'); //this is a function in a object or method
+            }
+        }
+        console.log(product2);
+        console.log(product2.rating);
+        product2.fun();
+        
+        const jasonProduct2 = JSON.stringify(product2);
+        console.log(JSON.parse(jasonProduct2));
+         
+        console.log('hello'.length);
+      console.log('hello'.toUpperCase());
+
+      const object1 = {
+        message: 'hello',
+        price: 799
+      };
+      const object2 = object1;
+
+      object1.message = 'Good job!';
+      console.log(object1);
+      console.log(object2);
+
+      const object3 = {
+        message: 'Good job!',
+        price: 799
+      };
+      console.log(object1 === object3);
+
+      // const message = object1.message;
+      const { message, price: cost } = object1;
+      console.log(message);
+      console.log(cost);
+
+      const object4 = {
+        // message: message,
+        message,
+        // method: function function1() {
+
+        // },
+        // method: function() {
+
+        // },
+        method() {
+
+        }
+      };
+        
+    </script>
+</body>
+</html>

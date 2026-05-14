@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects Challenge</title>
+</head>
+<body>
+    <script>
+        const productAmazon = {
+            name: 'basketball',
+            price: 2095,
+            
+        };
+        console.log(productAmazon);
+        console.log(productAmazon.price = 2595);
+        console.log(productAmazon['delivery-time'] = '3days');
+        console.log(productAmazon);
+        
+        function comparePrice(product1, product2) {
+            if (product1.price < product2.price) {
+                return product1;
+            }else if (product1.price > product2){
+                return product2;
+            }else {
+                return 'the product same price';
+            }
+        }
+
+        function isSameProduct(product1,produc2) {
+            return(
+                product1.name == produc2.name && product1.price == produc2.price
+            )
+            /* if (product1.name == produc2.name && product1.price == produc2.price) {
+                return true;
+            }else{
+                return false;
+            } 
+        */
+        }
+        const product1 = {
+            name: 'Basketball',
+            price: 2095
+        };
+        const product2 = {
+            name: 'basketball',
+            price: 2595
+        }
+        console.log(comparePrice(product1, product2));
+        console.log(isSameProduct(product1,product2));
+        console.log(product1.name.toLowerCase());
+        
+        console.log(product2.name.repeat(2));
+    </script>
+</body>
+</html>
