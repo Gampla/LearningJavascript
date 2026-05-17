@@ -15,6 +15,7 @@
       playGame('tails');
     ">tails</button>
     <button onclick="resetScore();">Reset Score</button>
+    <p class="js-playerPick"></p>
 </body>
 <script>
       const score =  JSON.parse(localStorage.getItem('score')) || {
@@ -34,7 +35,9 @@
        const result = playerpick === computerPick ? 'win' : 'lose';
         result === 'win' ? score.win++ : score.lose++;
         localStorage.setItem('score', JSON.stringify(score));
+        document.querySelector('.js-playerPick').innerHTML=`You ${playerpick}`;
         alert(`You ${result}! Score: win ${score.win} lose ${score.lose}`);
+        
       }
 </script>
 </html>
